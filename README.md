@@ -24,6 +24,13 @@ npx vercel
 ```
 
 ## メモ
+### ディレクトリ構造
+- https://nextjs.org/docs/app/getting-started/project-structure
+
+### App Router
+app ディレクトリの配下にファイルを配置するだけで、ページが作成できる
+Server Componentsを使う前提になる
+
 ### React Server Components(RSC)
 Server Componentsのデメリットとしては、以下の2つがあります。
 
