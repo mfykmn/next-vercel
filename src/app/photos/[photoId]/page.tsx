@@ -1,4 +1,4 @@
-import { LikeButton } from './LikeButton';
+import { LikeButton } from '../../../components/elements/LikeButton';
 
 type Props = {
     params: Promise<{photoId: string}>;

@@ -61,7 +61,7 @@ Client Componentsはブラウザ/サーバー両方で実行されるコンポ�
 
 ファイルの先頭に`"use client"`をつけると、そのファイルはClient Componentsとして扱われる
 
-注意点はClient Componentからimportされるコンポーネントや関連ファイルもブラウザ向けにバンドルされる
+注意点はClient Componentからimportされるコンポーネントや関連ファイルもブラウザ向けにバンドルされる(Client Componentになる)
 
 ここらへんの理解があやふやなので、もう少し調べる
 https://zenn.dev/luvmini511/articles/ec0e874a2cc1f1
