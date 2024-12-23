@@ -1,5 +1,5 @@
 # next-vercel
-
+Next.js + Vercelの勉強用
 
 # 開発環境構築
 ```bash
