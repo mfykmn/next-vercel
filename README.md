@@ -91,5 +91,34 @@ https://zenn.dev/luvmini511/articles/ec0e874a2cc1f1
   - ブラウザ専用のHooksを使用する
   - React Classコンポーネントを使用する
 
+### Route
+Routeごとにレンダリング手法を選択できる
+- 静的レンダリングRoute
+  - すべてのリクエストで同一のレンダリング結果を返す
+  - SSG/ISR
+  - CDNでキャッシュされる
+- 動的レンダリングRoute
+  - リクエストごとに異なるレンダリング結果を返す
+  - SSR
+
+Next.jsでは、デフォルトでは静的レンダリングRouteとして扱われる
+以下の要因が含まれると自動的に動的レンダリングRouteとして扱われる
+- 動的データ取得の使用
+- 動的関数の使用
+- Dynamic Segmentの使用
+
+build時にどれが静的レンダリングRouteか動的レンダリングRouteかを確認できる
+```bash
+Route (app)                              Size     First Load JS
+┌ ○ /                                    5.62 kB         111 kB
+├ ○ /_not-found                          979 B           106 kB
+├ ƒ /categories                          172 B           109 kB
+├ ƒ /categories/[categoryName]           139 B           105 kB
+├ ○ /company-info                        139 B           105 kB
+└ ƒ /photos/[photoId]                    322 B           106 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+```
 ## 参考
 - https://zenn.dev/akfm/books/nextjs-basic-principle
