@@ -54,6 +54,19 @@ Server Componentはサーバーサイドでのみ実行されるコンポーネ�
 
 AppRouter内で実装されるReactコンポーネントは、何も宣言しなければデフォルトですべてのコンポーネントがServer Componentsとして扱われる
 
+#### 動的データ取得と静的データ取得
+- 動的データ取得
+  - 閲覧履歴
+  - 商品在庫数
+- 静的データ取得
+  - 商品概要
+  - ブログ記事
+  - ニュース記事
+
+Next.jsではfetchが拡張されていて、何も指定しなければデフォルトで静的データ取得として扱われキャッシュされる
+動的取得するには fetch("http://...", {cache: "no-store"}) とする
+
+npm run devではキャッシュの動作は正常な挙動をしないので、動作確認したい場合はbuildしてからnpm run startで実行する必要がある
 
 ### React Client Components(RCC)
 Client Componentsはブラウザ/サーバー両方で実行されるコンポーネントのこと

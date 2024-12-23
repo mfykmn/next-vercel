@@ -4,7 +4,7 @@ export function LikeButton({photoId}: {photoId: string}) {
     return (
         <button
             onClick={() => {
-                console.log("いいねされました");
+                console.log(`いいねされました${photoId}`);
             }}
         >
             いいね
