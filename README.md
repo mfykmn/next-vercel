@@ -115,7 +115,7 @@ Next.jsでは、デフォルトでは静的レンダリングRouteとして扱�
     - Server ComponentでPropsのsearchParamsを使用する
     - Client ComponentでuseSearchParams()を使用する
 - Dynamic Segmentの使用
-  - パスの一部を動的にする
+  - /categories[categoryName]のようなパスの一部を動的にする
 
 build時にどれが静的レンダリングRouteか動的レンダリングRouteかを確認できる
 ```bash
