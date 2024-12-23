@@ -104,8 +104,18 @@ Routeごとにレンダリング手法を選択できる
 Next.jsでは、デフォルトでは静的レンダリングRouteとして扱われる
 以下の要因が含まれると自動的に動的レンダリングRouteとして扱われる
 - 動的データ取得の使用
+  - fetch("http://...", {cache: "no-store"})
+  - つまり静的データ取得はビルド時のデータで静的ファイルが生成されてデリバリされる？次回デリバリが走らないとデータは更新されない？
 - 動的関数の使用
+  - HTTPリクエストの内容を参照する関数のこと
+  - Cookieやヘッダーの参照
+    - Server Componentでcookies()を使用する
+    - Server Componentでheaders()を使用する
+  - URL検索パラメータの参照
+    - Server ComponentでPropsのsearchParamsを使用する
+    - Client ComponentでuseSearchParams()を使用する
 - Dynamic Segmentの使用
+  - パスの一部を動的にする
 
 build時にどれが静的レンダリングRouteか動的レンダリングRouteかを確認できる
 ```bash
