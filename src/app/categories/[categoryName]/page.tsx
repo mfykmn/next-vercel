@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 
 export default async function Page({
     params,
@@ -8,6 +9,9 @@ export default async function Page({
 }) {
     const categoryName = (await params).categoryName;
     const page = typeof (await searchParams).page === 'string' ? (await searchParams).page : '1';
+    if (parseInt(page as string) > 10) {
+        notFound(); // http://localhost:3000/categories/flower?page=11 not foundが出る
+    }
 
     return (
         <div>

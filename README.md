@@ -43,6 +43,14 @@ open http://localhost:3000/categories/flower?page=2
 - Nested Routes & Layouts
 - Streaming & Suspense
 
+#### AppRouterのSegment構成ファイルの命名規則
+この命名に則っているファイルがあるとAppRouterが勝手に読み込んでくれる
+https://nextjs.org/docs/app/getting-started/project-structure#routing-files
+
+#### Suspense と Error Boundary
+React Suspenseは、子が読み込みを完了するまでフォールバックUIを表示する機能
+Error Boundaryは、子コンポーネントでエラーがすろーされた場合にフォールバックUIを表示する機能
+
 ### React Server Components(RSC)
 Server Componentはサーバーサイドでのみ実行されるコンポーネントのこと
 
