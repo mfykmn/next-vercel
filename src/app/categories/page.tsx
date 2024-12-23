@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Page() {
     return (
         <div>
-           <h1>カテゴリ一覧</h1>
-           <ul>
+        <h1>カテゴリ一覧</h1>
+        <ul>
             <li>
                 <Link href="/categories/flower">花</Link>
             </li>
@@ -14,7 +14,7 @@ export default function Page() {
             <li>
                 <Link href="/categories/landscape">風景</Link>
             </li>
-           </ul>
+        </ul>
         </div>
     )
 }

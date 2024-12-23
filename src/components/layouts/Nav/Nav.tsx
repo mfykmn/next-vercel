@@ -13,6 +13,9 @@ export function Nav() {
                 <li>
                     <Link href="/company-info">会社情報</Link>
                 </li>
+                <li>
+                    <Link href="/photos/1">写真詳細</Link>
+                </li>
             </ul>
         </nav>
     )
