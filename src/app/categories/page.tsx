@@ -3,6 +3,7 @@ import Link from "next/link";
 async function getCategories() {
     const data = await fetch(
         "https://zipcloud.ibsnet.co.jp/api/search?zipcode=7830060",
+        {cache: "no-store"}
     ).then(res => res.json());
     return data;
 }
