@@ -43,15 +43,29 @@ open http://localhost:3000/categories/flower?page=2
 - Nested Routes & Layouts
 - Streaming & Suspense
 
-
-#### AppRouterのSegment構成ファイルの命名規則
+#### Segment構成ファイルの命名規則
 この命名に則っているファイルがあるとAppRouterが勝手に読み込んでくれる
 https://nextjs.org/docs/app/getting-started/project-structure#routing-files
 
 error.tsxは他の特別なファイルと異なりClient Componentとして定義しなければならない
-#### Suspense と Error Boundary
-React Suspenseは、子が読み込みを完了するまでフォールバックUIを表示する機能
-Error Boundaryは、子コンポーネントでエラーがすろーされた場合にフォールバックUIを表示する機能
+
+- React Suspenseは、子が読み込みを完了するまでフォールバックUIを表示する機能
+- Error Boundaryは、子コンポーネントでエラーがすろーされた場合にフォールバックUIを表示する機能
+
+
+#### Segment構成フォルダの命名規則
+- Dynamic Routes Segment
+- Route Grouops
+  - フォルダの一部をURL Pathから除外したいときに使う (feature) のように()で囲むとRoute Groups として認識される
+  - Route Grouopsにはlayout.tsxを用意できる
+- Private Folder
+  - _を先頭につけることでルーティングの影響外にできる
+  - ディレクトリに付けた場合は含まれるファイルすべてがルーティング影響外になる
+
+#### Parallel RoutesとIntercepting Routes
+@hoge
+.hoge
+TODO: あとでまたやる
 
 ### React Server Components(RSC)
 Server Componentはサーバーサイドでのみ実行されるコンポーネントのこと
